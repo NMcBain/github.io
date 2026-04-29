@@ -2,7 +2,7 @@
 layout: default
 ---
 
-[Link to another page]([./another-page.html](https://github.com/NMcBain/github.io/releases/download/v1/scarecrow_game.exe)).
+[Link to another page]((https://github.com/NMcBain/github.io/releases/download/v1/scarecrow_game.exe)).
 
 # Information about project
 
