@@ -1,105 +1,116 @@
-# Project - Return of the Scarecrow
+# The Modernist theme
 
-I will be continuing from my previous game from CS1. This game will be a top-down game stylized close to the style of the 1998 PC game, "Clue: Murder at Boddy Mansion". The game will run on Godot using GDScript rather than Python. While gameplay, functionality, and coding are essential to the project to functon as a whole, sound design will be my focal point. I will be using open source sounds for certain aspects, or placeholders for demos, and I will be recording my own sounds as well. The sounds will also be directional and proximity based on the sprites to the player character. This dynamic sound design will allow the player to use surround sound headphones to avoid a premature meeting with the scarecrow. I will also be adding pop-up windows, different scenes, and a mini game aspect (safe cracking or something like that).
+[![.github/workflows/ci.yaml](https://github.com/pages-themes/modernist/actions/workflows/ci.yaml/badge.svg)](https://github.com/pages-themes/modernist/actions/workflows/ci.yaml) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-modernist.svg)](https://badge.fury.io/rb/jekyll-theme-modernist)
 
-##Worldbuilding:
-The previous game ends with the player refueling an old truck and driving through a gate to escape the cornfield and the malevolent "scarecrow" that was pursuing the player. This is a direct sequel that will take place as the player drives the same old truck to their secluded house. As the player feels relieved to have finally escaped and return to the safety of their home, they realize something is wrong. As the player enters the house, they will notice straw and corn husks greeting them in their house. The player will have to carefully sneak around the house while avoiding the scarecrow, collecting clues, and finally defeating their obsessive enemy.
+*Modernist is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](http://pages-themes.github.io/modernist), or even [use it today](#usage).*
 
+![Thumbnail of Modernist](thumbnail.png)
 
-https://www.youtube.com/watch?v=dq0uYzGq2ok #This is just a youtube video of gameplay of the reference game.
+## Usage
 
-## Milestone 1
+To use the Modernist theme:
 
-My first milestone is to have a basic foundation of the game created. This will include nodes and folders created and at least the starting area created. I will also have the instructions for the game implimented.
+1. Add the following to your site's `_config.yml`:
 
-### Current Progress
+    ```yml
+    remote_theme: pages-themes/modernist@v0.2.0
+    plugins:
+    - jekyll-remote-theme # add this line to the plugins list if you already have one
+    ```
 
-I have the a blue background set, a player character that has animations, and the scarecrow sprite. Basic scripts have been written. This has taken hours of research and testing to get this far but I feel like I do not have a lot done so far.
+2. Optionally, if you'd like to preview your site on your computer, add the following to your site's `Gemfile`:
 
-### Challenges
+    ```ruby
+    gem "github-pages", group: :jekyll_plugins
+    ```
 
-I have never used Godot, and this is my second semester of coding experience, so this program is entirely new to me. This has proved to be a bit of a challenge, but the script language is very similar to Python, so that is reassuring. 
+## Customizing
 
-I am having trouble uploading the complete file to gitlab so it is able to be ran. Will be asking prof. Mielko for assistance 3/2 in class.
+### Configuration variables
 
-### Future Directions
+Modernist will respect the following variables, if set in your site's `_config.yml`:
 
-I would like to have more functionality to the game added. I would like to have more of the house layout set up and more movement options to the player character. As far as the house goes, I would like to have a new area for the house set up next time.
+```yml
+title: [The title of your site]
+description: [A short description of your site's purpose]
+```
 
+Additionally, you may choose to set the following optional variables:
 
-## Milestone 2
+```yml
+show_downloads: ["true" or "false" (unquoted) to indicate whether to provide a download URL]
+google_analytics: [Your Google Analytics tracking ID]
+```
 
-My second milestone has the game 90% complete desing wise. House is nearly completeley set up, just needs more detail. Player can adjust speed of walk now. Interconnecting scripts added between scenes. Currently there is no way to "win" yet. 
+### Stylesheet
 
-### Current Progress
+If you'd like to add your own custom styles:
 
-There is now a Main Menu and instructions in the spawn area. I Have added a counter that activates every interaction between the player and the scarecrow. Once the counter reaches 5 hits, the game will revert to main menu and reset inventory. The player can interact with the world for a message and with items to pick the items up. Once picked up the items will leave the floor and be in the player inventory. The player can check their inventory by pressing "e" and a message will display every item in your inventory. The scarecrow follows a set path in the house
+1. Create a file called `/assets/css/style.scss` in your site
+2. Add the following content to the top of the file, exactly as shown:
+    ```scss
+    ---
+    ---
 
-### Challenges
+    @import "{{ site.theme }}";
+    ```
+3. Add any custom CSS (or Sass, including imports) you'd like immediately after the `@import` line
 
-Getting the multiple scenes to interact and "remember" the inventory was challenging but fun. Working through the code was difficult with adding new functions and having them call each other but finally having the functions not crash the game was quite rewarding each time! 
+*Note: If you'd like to change the theme's Sass variables, you must set new values before the `@import` line in your stylesheet.*
 
-### Future Directions
+### Layouts
 
-Other than polishing and finishing the "back yard", I mainly need to add sounds. 
-That is the bulk of Milestone 3. I saved sound for the end because I wanted to get the majority of the new 
-material and hard work finished before goofing around with the sound studio software.
+If you'd like to change the theme's HTML layout:
 
+1. For some changes such as a custom `favicon`, you can add custom files in your local `_includes` folder. The files [provided with the theme](https://github.com/pages-themes/modernist/tree/master/_includes) provide a starting point and are included by the [original layout template](https://github.com/pages-themes/modernist/blob/master/_layouts/default.html).
+2. For more extensive changes, [copy the original template](https://github.com/pages-themes/modernist/blob/master/_layouts/default.html) from the theme's repository<br />(*Pro-tip: click "raw" to make copying easier*)
+3. Create a file called `/_layouts/default.html` in your site
+4. Paste the default layout content copied in the first step
+5. Customize the layout as you'd like
 
-## Final Submission
+### Customizing Google Analytics code
 
-### Overview
+Google has released several iterations to their Google Analytics code over the years since this theme was first created. If you would like to take advantage of the latest code, paste it into `_includes/head-custom-google-analytics.html` in your Jekyll site.
 
-This game acts as a demo for my idea of a stealth escape game, similar to 'Outlast' but not as spooky (you cannot attack and must hide or outrun enemies). The demo game follows the main player character, from my previous project 'scary maze game'. This game features a GUI and a top-down view of the character. Story-wise the character returns home after escaping from the scary maze. Although when returning home, the player realizes the scarecrow has followed you! You must be sneaky and find the key to escape the house!
-### Tutorial
+### Overriding GitHub-generated URLs
 
-CONTROLS: 
-'wasd' or "up, down, left, right" for movement.
-hold 'tab' for sprint
-'e' to open your inventory
-'q' to interact with the environment or to pick up collectible
-'esc' to quit/end game
+Templates often rely on URLs supplied by GitHub such as links to your repository or links to download your project. If you'd like to override one or more default URLs:
 
-The game takes movement functions from 'wasd' or up, down, left, right, keys. The player makes noise that attracts the scarecrow if you get too close. You must get out of the line of sight of the scarecrow and stop making noies for it to stop chasing you. The 'tab' button acts as a sprint, but sprinting makes more noise. The player can find a pair of sneaking boots to make less noise and not attract the scarecrow. You have 3 hit points essentially. If the scarecrow makes contact with you a third time, the game is over.
+1. Look at [the template source](https://github.com/pages-themes/modernist/blob/master/_layouts/default.html) to determine the name of the variable. It will be in the form of `{{ site.github.zip_url }}`.
+2. Specify the URL that you'd like the template to use in your site's `_config.yml`. For example, if the variable was `site.github.url`, you'd add the following:
+    ```yml
+    github:
+      zip_url: http://example.com/download.zip
+      another_url: another value
+    ```
+3. When your site is built, Jekyll will use the URL you specified, rather than the default one provided by GitHub.
 
-The main objective of the game is to escape to the backyard well where you can hide from the scarecrow. In order to get into the backyard, the player needs to find a key in the basement. This requires hiding and evading from the scarecrow at least two times. Once the key is retrieved, the player can enter the backyard and then jump into the well to end the game.
+*Note: You must remove the `site.` prefix, and each variable name (after the `github.`) should be indent with two space below `github:`.*
 
-### Installation Instructions
+For more information, see [the Jekyll variables documentation](https://jekyllrb.com/docs/variables/).
 
-https://github.com/NMcBain/github.io this link will open a GitHub repository
-https://nmcbain.github.io/github.io/ this link will directly open the web portfolio on the repository. There is a link to releases and you will open the .exe file, download the 92MB file and the game will run off that file.
+## Roadmap
 
-### Citation, Sources, and References
+See the [open issues](https://github.com/pages-themes/modernist/issues) for a list of proposed features (and known issues).
 
-https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html 
-#GDScript reference
+## Project philosophy
 
-https://www.youtube.com/watch?v=dq0uYzGq2ok 
-#youtube video of Clue that I am referencing.
+The Modernist theme is intended to make it quick and easy for GitHub Pages users to create their first (or 100th) website. The theme should meet the vast majority of users' needs out of the box, erring on the side of simplicity rather than flexibility, and provide users the opportunity to opt-in to additional complexity if they have specific needs or wish to further customize their experience (such as adding custom CSS or modifying the default layout). It should also look great, but that goes without saying.
 
-https://opengameart.org/content/classic-hero 
-#hero textues
+## Contributing
 
-https://craftpix.net/ 
-#other open source textures
+Interested in contributing to Modernist? We'd love your help. Modernist is an open source project, built one contribution at a time by users like you. See [the CONTRIBUTING file](docs/CONTRIBUTING.md) for instructions on how to contribute.
 
-https://kira.art/en-US/
-#Krita editing software for manipulating textures and creating animations.
+### Previewing the theme locally
 
-https://www.videolan.org/
-#VCL media editor for converting mp4a to mp3 files
+If you'd like to preview the theme locally (for example, in the process of proposing a change):
 
-https://www.audacityteam.org/
-#audacity for editing and manipulating sounds
+1. Clone down the theme's repository (`git clone https://github.com/pages-themes/modernist`)
+2. `cd` into the theme's directory
+3. Run `script/bootstrap` to install the necessary dependencies
+4. Run `bundle exec jekyll serve` to start the preview server
+5. Visit [`localhost:4000`](http://localhost:4000) in your browser to preview the theme
 
-https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html 
-#godot script reference
+### Running tests
 
-https://docs.godotengine.org/en/stable/tutorials/scripting/nodes_and_scene_instances.html 
-#godot nodes reference
-
-https://ikoiku.itch.io/16-x-16-pixel-art-character-scarecrow 
-#scarecrow textures
-
-https://www.youtube.com/watch?v=NNnuXie3xVU&t=887s 
-#video reference for top-down game creation
+The theme contains a minimal test suite, to ensure a site with the theme would build successfully. To run the tests, simply run `script/cibuild`. You'll need to run `script/bootstrap` once before the test script will work.
