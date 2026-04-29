@@ -7,9 +7,13 @@ layout: default
 # Information about project
 
 Overview
+
 This game acts as a demo for my idea of a stealth escape game, similar to 'Outlast' but not as spooky (you cannot attack and must hide or outrun enemies). The demo game follows the main player character, from my previous project 'scary maze game'. This game features a GUI and a top-down view of the character. Story-wise the character returns home after escaping from the scary maze. Although when returning home, the player realizes the scarecrow has followed you! You must be sneaky and find the key to escape the house! Sound is a major component to the game, if you make too much noise the Scarecrow will chase you!
+
 Tutorial
+
 CONTROLS:
+
 'wasd' or "up, down, left, right" for movement.
 hold 'tab' for sprint
 'e' to open your inventory
