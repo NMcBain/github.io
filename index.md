@@ -2,7 +2,7 @@
 layout: default
 ---
 
-[Download for game]([(https://github.com/NMcBain/github.io/releases/download/v1/scarecrow_game.exe)]).
+[Download for game](https://github.com/NMcBain/github.io/releases/tag/v1).
 
 # Information about project
 
