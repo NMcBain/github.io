@@ -27,7 +27,6 @@ The main objective of the game is to escape to the backyard well where you can h
 * * *
 
 
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
 
 
 
